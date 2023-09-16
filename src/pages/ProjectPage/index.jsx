@@ -5,7 +5,7 @@ import useProject from "../../hooks/useProject";
 function ProjectPage() {
   const { id } = useParams();
   const { project, isLoading, error } = useProject(id);
-    
+
   if (isLoading) {
     return (<p> Loading...</p>)
   }
