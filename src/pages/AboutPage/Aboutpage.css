@@ -1,0 +1,68 @@
+/* base html styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+:root {
+
+/* CSS HEX */
+ --umber: #756658ff;
+ --seal-brown: #602C10ff; 
+ --raw-umber: #9A6034ff; 
+ --raisin-black: #1B171Eff; 
+ --dutch-white: #F7E9C8ff;
+}
+
+
+/* css reset */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--raisin-black);
+    scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+ol,
+ul {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* Global Styles */
+
+label, input, textarea, select {
+	display:block;
+	width: 100%;
+}
+input, textarea, select {
+	padding: 8px
+}
+
