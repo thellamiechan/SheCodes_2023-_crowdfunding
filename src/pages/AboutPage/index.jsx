@@ -2,7 +2,7 @@ import NavBar from "../../components/NavBar";
 import "./Aboutpage.css";
 
 function AboutPage() {
-  return (
+    return (
     <div>
       <NavBar />
       <div className="about-content">
