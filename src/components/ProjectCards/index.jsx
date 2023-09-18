@@ -3,7 +3,7 @@ import "./ProjectCard.css";
 
 function ProjectCard(props) {
     const { projectData } = props;
-    const projectPath= `project/${projectData.id}`;
+    const projectPath= `projects/${projectData.id}`;
     
     return (
         <div className="projectCard">

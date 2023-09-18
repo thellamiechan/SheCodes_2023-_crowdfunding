@@ -3,8 +3,16 @@ import ProjectCard from "../../components/ProjectCards";
 import "./HomePage.css";
 
 function HomePage() {
-    const { projects } = useProjects();
-    console.log(projects)
+    const { projects, isLoading, error} = useProjects();
+
+    if (isLoading) {
+        return (<p> Loading...</p>)
+      }
+    
+      if (error) {
+        return (<p>{error.message}</p>)
+      }
+    
     return (
         <div id="project-list">
             {projects.map((projectData, key) => {
