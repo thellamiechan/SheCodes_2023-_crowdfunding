@@ -12,7 +12,7 @@ function HomePage() {
       if (error) {
         return (<p>{error.message}</p>)
       }
-    
+      
     return (
         <div id="project-list">
             {projects.map((projectData, key) => {

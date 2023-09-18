@@ -10,6 +10,7 @@
  --raisin-black: #1B171Eff; 
  --dutch-white: #F7E9C8ff;
 }
+
 #project-list {
     display: grid;
     grid-template-columns: 24% 24% 24%;

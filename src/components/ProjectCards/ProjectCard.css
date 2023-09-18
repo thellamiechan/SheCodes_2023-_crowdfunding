@@ -1,6 +1,19 @@
+/* base html styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+:root {
+
+ --umber: #756658ff;
+ --seal-brown: #602C10ff; 
+ --raw-umber: #9A6034ff; 
+ --raisin-black: #1B171Eff; 
+ --dutch-white: #F7E9C8ff;
+}
+
 .project-card {
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid --raisin-black;
     box-shadow: 0px 0px 5px gray;
 }
 
