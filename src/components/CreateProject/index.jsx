@@ -78,3 +78,5 @@ function createProject(props) {
         </form>
       )    
     }
+
+    export default createProject

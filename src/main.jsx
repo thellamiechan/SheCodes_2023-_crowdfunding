@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import  ProjectPage from './pages/ProjectPage';
+import ProjectPage from './pages/ProjectPage';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage'
-import LoginPage from './pages/LoginPage'
+import ContactPage from './pages/ContactPage';
+import CreateProject from './components/CreateProject';
+import LoginPage from './pages/LoginPage';
 
 const router = createBrowserRouter([
   {
