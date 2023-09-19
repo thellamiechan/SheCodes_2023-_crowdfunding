@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import {useAuth} from "../../hooks/useAuth";
+import useAuth from "../../hooks/useAuth";
 
 function NavBar() {
     const {auth, setAuth} = useAuth();
