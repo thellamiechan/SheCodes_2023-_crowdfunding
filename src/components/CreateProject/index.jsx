@@ -11,7 +11,7 @@ function createProject(props) {
         goal: 0,
         image: '',
         is_open: false,
-        date_created: strDateTime,
+        date_created: '',
         owner: props.userId,
     })
       
@@ -74,7 +74,7 @@ function createProject(props) {
               onChange={handleChecked}
             />
           </div>
-          <input type="submit" value="project" />
+          <input type="submit" value="Submit your Book" />
         </form>
       )    
     }
