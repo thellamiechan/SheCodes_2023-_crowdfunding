@@ -11,20 +11,20 @@ function createProject(props) {
         goal: 0,
         image: '',
         is_open: false,
-        date_created: '',
+        date_created: int,
         owner: props.userId,
     })
       
     const handleChange = (e) => {
         setProjectData({
-            ...pledgeData, 
+            ...projectData, 
             [e.target.id]: e.target.value
         })
     } 
         
     const handleChecked = (e) => {
         setProjectData({
-            ...pledgeData,
+            ...projectData,
             [e.target.id]: e.target.checked
         })
     }
