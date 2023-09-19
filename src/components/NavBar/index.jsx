@@ -1,7 +1,7 @@
-import { Link, Outlet } from "react-router-dom"
-import useAuth from "../../hooks/useAuth.js"
+import { Link, Outlet } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
-function NavBar( ) {
+function NavBar() {
     const {auth, setAuth} = useAuth();
 
     const handleLogout = () => {
@@ -10,7 +10,7 @@ function NavBar( ) {
     };
 
     console.log(auth)
-    
+
     return (
         <div>
             <nav> 
