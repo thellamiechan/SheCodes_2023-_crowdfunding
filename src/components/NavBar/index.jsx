@@ -8,6 +8,9 @@ function NavBar( ) {
         window.localStorage.removeItem("token");
         setAuth({ token: null });
     };
+
+    console.log(auth)
+    
     return (
         <div>
             <nav> 
@@ -20,8 +23,8 @@ function NavBar( ) {
                         Log Out
                     </link>
                     ) : (
-                <Link to="/login">Login</Link>
-            )}
+                    <Link to="/login">Login</Link>
+                )}
             </nav>
         <Outlet />
     </div>
