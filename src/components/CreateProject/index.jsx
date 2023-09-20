@@ -11,20 +11,19 @@ function createProject(props) {
         goal: 0,
         image: '',
         is_open: false,
-        date_created: new Date().toISOString(),
         owner: props.userId,
     })
       
     const handleChange = (e) => {
         setProjectData({
-            ...pledgeData, 
+            ...projectData, 
             [e.target.id]: e.target.value
         })
     } 
         
     const handleChecked = (e) => {
         setProjectData({
-            ...pledgeData,
+            ...projectData,
             [e.target.id]: e.target.checked
         })
     }
@@ -74,7 +73,7 @@ function createProject(props) {
               onChange={handleChecked}
             />
           </div>
-          <input type="submit" value="project" />
+          <input type="submit" value="Submit your Book" />
         </form>
       )    
     }

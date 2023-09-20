@@ -1,30 +1,30 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'
-import postPledge from '../../api/postPledge'
+import { useNavigate } from 'react-router-dom';
+import postPledge from '../../api/postPledge';
 
 function createPledge(props) {
   const navigate = useNavigate()
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   const [pledgeData, setPledgeData] = useState({
     project: props.projectId,
     amount: 0,
     comment: '',
     anonymous: false
-  })
+  });
 
   const handleChange = (e) => {
     setPledgeData({
       ...pledgeData, 
       [e.target.id]: e.target.value
     })
-  }
+  };
 
   const handleChecked = (e) => {
     setPledgeData({
       ...pledgeData,
       [e.target.id]: e.target.checked
     })
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -37,11 +37,11 @@ function createPledge(props) {
       .catch(() => {
         setIsLoading(false)
       })
-  }
+  };
 
   if(isLoading) {
     return <p>Loading...</p>
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -73,7 +73,7 @@ function createPledge(props) {
       </div>
       <input type="submit" value="Pledge" />
     </form>
-  )
-}
+  );
+};
 
 export default createPledge
