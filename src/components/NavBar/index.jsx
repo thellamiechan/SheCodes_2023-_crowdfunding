@@ -19,9 +19,9 @@ function NavBar() {
                 <Link to="/contact">Contact </Link>
                 <Link to="/projects">Create a Project </Link>
                 {auth.token ? (
-                    <link to="/" onClick={handleLogout}>
+                    <Link to="/" onClick={handleLogout}>
                         Log Out
-                    </link>
+                    </Link>
                     ) : (
                     <Link to="/login">Login</Link>
                 )}
