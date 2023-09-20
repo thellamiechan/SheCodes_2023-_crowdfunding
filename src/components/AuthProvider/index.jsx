@@ -5,9 +5,10 @@ export const AuthProvider = (props) => {
     const [auth, setAuth] = useState({
         token: window.localStorage.getItem("token"),
     });
-     return (
+
+    return (
         <AuthContext.Provider value={{ auth, setAuth }}>
             {props.children}
         </AuthContext.Provider>
-     );   
+    );   
 };

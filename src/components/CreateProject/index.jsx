@@ -11,6 +11,7 @@ function createProject(props) {
         goal: 0,
         image: '',
         is_open: false,
+        date_created: new Date().toISOString(),
         owner: props.userId,
     })
       

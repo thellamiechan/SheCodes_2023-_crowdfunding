@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import useAuth from "../../hooks/useAuth.js";
+import { useAuth } from "../../hooks/use-auth.js";
 
 function NavBar() {
     const {auth, setAuth} = useAuth();
@@ -26,8 +26,8 @@ function NavBar() {
                     <Link to="/login">Login</Link>
                 )}
             </nav>
-        <Outlet />
-    </div>
+            <Outlet />
+        </div>
     );
 };
 
