@@ -58,7 +58,9 @@ Create an account in the UI - yes, made, but not working, it never adds the user
 
 [ ] A link to the deployed project. 
 
-[ ] A screenshot of the homepage https://master--magical-nougat-3b05c8.netlify.app/
+[ ] A screenshot of the homepage 
+https://master--magical-nougat-3b05c8.netlify.app/
+
 [ ] A screenshot of the project creation page:
 <img width="1344" alt="home page 2023-09-24 at 9 54 01 pm" src="https://github.com/thellamiechan/SheCodes_2023-_crowdfunding/assets/133753350/afac6ca4-a8a9-4fcd-8ce3-d3f5eb925ee0">
 
@@ -71,6 +73,6 @@ Create an account in the UI - yes, made, but not working, it never adds the user
 [ ] A screenshot of the resulting page when an unauthorized user attempts to edita project (optional, depending on whether or not this functionality makes sense inyour app!)
 <img width="405" alt="project card logged out2023-09-24 at 10 07 26 pm" src="https://github.com/thellamiechan/SheCodes_2023-_crowdfunding/assets/133753350/278e2894-4fb7-4668-a496-ace72434fb13">
 
-
+Please take note of the last two images, the last is an image of a project card when no one is logged in, the last -1 is of a project card with a user logged in. The link to both post a pledge and to edit the project card are not even available to an unauthorized user.
 
 
