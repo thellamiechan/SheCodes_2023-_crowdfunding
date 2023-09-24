@@ -1,18 +1,19 @@
-async function postLogin(username, password) {
-    const url = `${import.meta.env.VITE_API_URL}/api-token-auth/`;
+async function postUser(userData) {
+    const url = `${import.meta.env.VITE_API_URL}/users/`;
     const response = await fetch(url, {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            "username": username,
-            "password": password,
-        }),
+            "name": userData.username,
+            "password": userData.password,
+            "email": userData.email
+        })
     });
 
     if (!response.ok) {
-        const fallbackError = `Error trying to login`;
+        const fallbackError = "Error trying to load";
 
         const data = await response.json().catch(() => {
             throw new Error(fallbackError);
@@ -25,4 +26,4 @@ async function postLogin(username, password) {
     return await response.json();
 }
 
-export default postLogin
+export default postUser;

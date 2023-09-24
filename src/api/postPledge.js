@@ -1,4 +1,4 @@
-async function postPledge(amount, comment) {
+async function postPledge(pledgeData) {
     const url = `${import.meta.env.VITE_API_URL}/pledges/`;
     const token =window.localStorage.getItem("token");
     const response = await fetch(url, {
@@ -8,10 +8,15 @@ async function postPledge(amount, comment) {
             "Authorization":`Token ${token}`
         },
         body: JSON.stringify({
-            "amount": amount,
-            "comment": comment,
+            "project":pledgeData.projectId,
+            "amount":pledgeData.amount,
+            "comment": pledgeData.comment,
+            "anonymous":pledgeData.anonymous,
+            "supporter": 2
         }),
     });
+    console.log(pledgeData);
+
     if (!response.ok) {
       const fallbackError = "Error trying to load";
 

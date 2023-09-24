@@ -6,6 +6,9 @@ import ProjectPage from './pages/ProjectPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import CreateProject from './components/CreateProject';
+import ChangeProject from './components/ChangeProject';
+import CreatePledgePage from './pages/CreatePledge';
+import CreateUser from './components/CreateUser';
 import LoginPage from './pages/LoginPage';
 import NavBar from './components/NavBar';
 import { AuthProvider } from './components/AuthProvider';
@@ -19,7 +22,9 @@ const router = createBrowserRouter([
       {path: '/projects/:id', element: <ProjectPage />},
       {path:'/about', element: <AboutPage />},
       {path:'/contact', element:<ContactPage />},
-      {path:'/projects', element:<CreateProject />},
+      {path:'/projects/', element:<CreateProject />},
+      {path:'/pledges/', element:<CreatePledgePage />},
+      {path:'/users/', element: <CreateUser />},
       {path: "/login", element: <LoginPage /> },
     ],
   },

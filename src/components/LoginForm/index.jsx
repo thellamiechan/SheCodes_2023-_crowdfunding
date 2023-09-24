@@ -5,7 +5,7 @@ import { useAuth } from '../../hooks/use-auth.js';
 
 function LoginForm() {
     const navigate = useNavigate();
-    const {auth, setAuth} = useAuth();
+    const { auth, setAuth } = useAuth();
     const [credentials, setCredentials] = useState({
         username: "",
         password: "",
@@ -17,7 +17,7 @@ function LoginForm() {
             ...prevCredentials,
             [id]: value,
         }));
-    }; 
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -25,7 +25,7 @@ function LoginForm() {
             postLogin(
                 credentials.username,
                 credentials.password
-            ).then((response)  => {
+            ).then((response) => {
                 window.localStorage.setItem("token", response.token);
                 setAuth({
                     token: response.token,
@@ -35,30 +35,31 @@ function LoginForm() {
         }
     };
 
+
     return (
         <form>
             <div>
-                <label htmlFor= "username">Username</label>
-                <input 
-                    type="text" 
-                    id="username" 
-                    placeholder="Enter Username" 
-                    onChange={handleChange} 
+                <label htmlFor="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter Username"
+                    onChange={handleChange}
                 />
             </div>
             <div>
                 <label htmlFor="password">Password</label>
-                <input 
-                    type="password" 
-                    id="password" 
-                    placeholder="Password" 
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
                     onChange={handleChange}
                 />
-        </div>
-        <button type='submit'onClick={handleSubmit}>
-            Login
-        </button>
-    </form>
+            </div>
+            <button type='submit' onClick={handleSubmit}>
+                Login
+            </button>
+        </form>
     );
 };
 

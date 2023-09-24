@@ -1,19 +1,22 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'
-import postProject from '../../api/postProject'
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../hooks/use-auth.js';
+import postProject from '../../api/postProject';
 
-function createProject(props) {
+function CreateProject(props) {
     const navigate = useNavigate()
-    const [isLoading, setIsLoading] = useState(false)
+    const {auth, setAuth} = useAuth();
+    // const [isLoading, setIsLoading] = useState(false);
     const [projectData, setProjectData]= useState({
         title: '',
         synopsis: '',
         goal: 0,
         image: '',
-        is_open: false,
-        date_created: new Date().toISOString(),
-        owner: props.userId,
+        is_open: false
     })
+
+    console.log(projectData);
+    console.log(props.userID);
       
     const handleChange = (e) => {
         setProjectData({
@@ -28,26 +31,26 @@ function createProject(props) {
             [e.target.id]: e.target.checked
         })
     }
-    
     const handleSubmit = (e) => {
         e.preventDefault()
-        setIsLoading(true)
+        // setIsLoading(true)
     
         postProject(projectData)
           .then(() => {
-            navigate(0)
+            navigate("/")
           })
-          .catch(() => {
-            setIsLoading(false)
-        })
+          .catch (() => {
+            // setIsLoading(false);
+            console.log("postProject Failed")
+          });
     }
-
-    if(isLoading) {
-        return <p>Loading...</p>
-    } 
-      
+    // if (isLoading) {
+    //   return (<p> Loading...</p>)
+    // }
+    
     return (
-        <form onSubmit={handleSubmit}>
+        <form>
+        {/* <form onSubmit={handleSubmit}> */}
           <div>
             <label htmlFor="title">Title</label>
             <input 
@@ -67,6 +70,23 @@ function createProject(props) {
             />
           </div>
           <div>
+          <label htmlFor="goal">Goal</label>
+            <input 
+              type="text"
+              id="goal"
+              placeholder='Crowdfunding Goal'
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor='image'>Image link</label>
+            <input
+              type='text'
+              id='image'
+              onChange={handleChange}
+            />
+          </div>
+          <div>
             <label htmlFor='is_open'>Open for pledges?</label>
             <input
               type='checkbox'
@@ -74,9 +94,13 @@ function createProject(props) {
               onChange={handleChecked}
             />
           </div>
-          <input type="submit" value="Submit your Book" />
+          <button type='submit'onClick={handleSubmit}>
+            Submit it
+        </button>
+          {/* <input type="submit" value="Submit your Book" /> */}
         </form>
-      )    
-    }
+        
+    )    
+  }
 
-    export default createProject
+export default CreateProject

@@ -17,7 +17,16 @@ function NavBar() {
                 <Link to='/'>Home </Link>
                 <Link to="/about">About </Link>
                 <Link to="/contact">Contact </Link>
-                <Link to="/projects">Create a Project </Link>
+                {auth.token == null && (
+                <>
+                    <Link to="/users">Create an Account  </Link>
+                </>
+                )}
+                {auth.token && (
+                <>
+                    <Link to="/projects/">Create a Project </Link>
+                </>
+                )}
                 {auth.token ? (
                     <Link to="/" onClick={handleLogout}>
                         Log Out

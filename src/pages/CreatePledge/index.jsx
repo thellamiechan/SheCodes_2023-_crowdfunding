@@ -1,20 +1,25 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import useProject from '../../hooks/useProject.js';
+import { useAuth } from '../../hooks/use-auth.js';
 import postPledge from '../../api/postPledge';
 
-function createPledge(props) {
+function CreatePledgePage() {
   const navigate = useNavigate()
+  const { auth, setAuth } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [pledgeData, setPledgeData] = useState({
-    project: props.projectId,
     amount: 0,
     comment: '',
+    project: `projects/${projectData.id}`,
     anonymous: false
-  });
+  })
+  console.log(pledgeData)
+  // console.log(useProject(projectId));
 
   const handleChange = (e) => {
     setPledgeData({
-      ...pledgeData, 
+      ...pledgeData,
       [e.target.id]: e.target.value
     })
   };
@@ -32,35 +37,35 @@ function createPledge(props) {
 
     postPledge(pledgeData)
       .then(() => {
-        navigate(0)
+        navigate('/')
       })
       .catch(() => {
-        setIsLoading(false)
+        setIsLoading(false);
       })
   };
 
-  if(isLoading) {
-    return <p>Loading...</p>
-  };
+  // if(isLoading) {
+  // return <p>Loading...</p>
+  // };
 
   return (
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="amount">Amount</label>
-        <input 
-          type="text" 
-          id="amount" 
-          placeholder='Enter the amount' 
-          onChange={handleChange} 
+        <input
+          type="text"
+          id="amount"
+          placeholder='Enter the amount'
+          onChange={handleChange}
         />
       </div>
       <div>
         <label htmlFor="comment">Comment</label>
-        <input 
-          type="text" 
-          id="comment" 
-          placeholder='Enter a comment' 
-          onChange={handleChange} 
+        <input
+          type="text"
+          id="comment"
+          placeholder='Enter a comment'
+          onChange={handleChange}
         />
       </div>
       <div>
@@ -76,4 +81,4 @@ function createPledge(props) {
   );
 };
 
-export default createPledge
+export default CreatePledgePage
