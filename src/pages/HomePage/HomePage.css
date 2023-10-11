@@ -1,6 +1,9 @@
-#project-list {
+.project-list {
     display: grid;
     grid-template-columns: 30%30%30%;
     column-gap: 16px;
     row-gap: 16px;
+    background-color: #F7E9C8ff;
+    border: 1px solid #1B171Eff;
+    box-shadow: 0px 0px 5px #756658ff;
 }

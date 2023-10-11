@@ -1,0 +1,37 @@
+/* -----------------RESET BASICS--------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: #F7E9C8ff;
+    background-image: linear-gradient(to right,#9A6034ff, #602C10ff);
+  }
+
+  .nav-links {
+    font-size: 32px;
+  }
+
+  .nav-links a {
+    color: #F7E9C8ff;
+  }
+
+  /* LOGO */
+.logo {
+    font-size: 48px;
+  }
+

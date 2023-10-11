@@ -1,8 +1,9 @@
 import { Link, Outlet } from "react-router-dom";
 import { useAuth } from "../../hooks/use-auth.js";
+import "./NavBar.css";
 
 function NavBar() {
-    const {auth, setAuth} = useAuth();
+    const { auth, setAuth } = useAuth();
 
     const handleLogout = () => {
         window.localStorage.removeItem("token");
@@ -13,27 +14,35 @@ function NavBar() {
 
     return (
         <div>
-            <nav> 
-                <Link to='/'>Home </Link>
-                <Link to="/about">About </Link>
-                <Link to="/contact">Contact </Link>
-                {auth.token == null && (
-                <>
-                    <Link to="/users">Create an Account  </Link>
-                </>
-                )}
-                {auth.token && (
-                <>
-                    <Link to="/projects/">Create a Project </Link>
-                </>
-                )}
-                {auth.token ? (
-                    <Link to="/" onClick={handleLogout}>
-                        Log Out
-                    </Link>
+            <nav className='navbar'>
+
+                {/* LOGO */}
+                <div className='logo'>Bookarina</div>
+
+                {/* NAVIGATION MENU */}
+                <ul className='nav-links'>
+                    <Link to='/'>Home </Link>
+                    <Link to='/about'>About </Link>
+                    <Link to='/contact'>Contact </Link>
+                    {auth.token == null && (
+                        <>
+                            <Link to='/users'>Create an Account  </Link>
+                        </>
+                    )}
+                    {auth.token && (
+                        <>
+                            <Link to='/projects/'>Create a Project </Link>
+                        </>
+                    )}
+                    {auth.token ? (
+                        <Link to='/' onClick={handleLogout}>
+                            Log Out
+                        </Link>
                     ) : (
-                    <Link to="/login">Login</Link>
-                )}
+                        <Link to='/login'>Login</Link>
+                    )}
+
+                </ul>
             </nav>
             <Outlet />
         </div>

@@ -8,17 +8,17 @@
   a {
     text-decoration: none;
   }
-.projectCard {
-    width: 100%;
+.project-page {
+    width: 80%;
+    padding: 40px;
+    margin-left: 60px;
     background-color: #F7E9C8ff;
     border: 1px solid #1B171Eff;
-    border-radius: 8px;
     box-shadow: 0px 0px 5px #756658ff;
-}
+  }
 
-.projectCard img {
-    width: 99%;
-    margin-left: 2px;
+.project-page img {
+    width: 300px;
     height: 300px;
     object-fit: cover;
     border: 1px solid;
@@ -27,7 +27,5 @@
     box-shadow: 0px 0px 5px #756658ff;
 }
 
-.projectCard link {
-    font-size: 24px;
-    color:#1B171Eff
-}
+
+    
