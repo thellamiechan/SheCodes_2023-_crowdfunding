@@ -1,0 +1,13 @@
+.contact-content {
+    width: 100%;
+    text-align: center;
+    background-color: #F7E9C8ff;
+    border: 1px solid #1B171Eff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px #756658ff;
+}
+
+.contact-content h1{
+    font-size: 32px;
+}
+
