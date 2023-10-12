@@ -6,7 +6,7 @@ async function postUser(userData) {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            "name": userData.username,
+            "username": userData.username,
             "password": userData.password,
             "email": userData.email
         })

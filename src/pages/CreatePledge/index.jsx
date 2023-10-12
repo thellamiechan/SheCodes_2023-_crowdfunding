@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import projectId from '../../hooks/useProject.js';
 import { useAuth } from '../../hooks/use-auth.js';
 import postPledge from '../../api/postPledge';
 
@@ -11,7 +10,7 @@ function CreatePledgePage() {
   const [pledgeData, setPledgeData] = useState({
     amount: 0,
     comment: '',
-    project: `projects/${projectId}`,
+    project: `projects/:id`,
     anonymous: false
   })
   console.log(pledgeData)
@@ -44,7 +43,7 @@ function CreatePledgePage() {
       })
   };
 
-  if(isLoading) {
+  if (isLoading) {
     return <p>Loading...</p>
   };
 
