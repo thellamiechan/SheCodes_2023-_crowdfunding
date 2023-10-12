@@ -26,7 +26,7 @@ function NavBar() {
                     <Link to='/contact'>Contact </Link>
                     {auth.token == null && (
                         <>
-                            <Link to='/users'>Create an Account  </Link>
+                            <Link to='/users/'>Create an Account  </Link>
                         </>
                     )}
                     {auth.token && (
@@ -39,7 +39,7 @@ function NavBar() {
                             Log Out
                         </Link>
                     ) : (
-                        <Link to='/login'>Login</Link>
+                        <Link to='/login/'>Login</Link>
                     )}
 
                 </ul>
