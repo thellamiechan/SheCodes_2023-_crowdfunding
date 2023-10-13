@@ -11,6 +11,7 @@
   }
 .projectCard {
     width: 100%;
+    height: 350px;
     background-color: #F7E9C8ff;
     border: 1px solid #1B171Eff;
     border-radius: 8px;
@@ -18,7 +19,7 @@
 }
 
 .projectCard img {
-    width: 99%;
+    width: 100%;
     margin-left: 2px;
     height: 300px;
     object-fit: cover;
@@ -28,7 +29,7 @@
     box-shadow: 0px 0px 5px #756658ff;
 }
 
-.projectCard link {
+.projectCard h3{
     font-size: 24px;
-    color:#1B171Eff
+    color:#1B171Eff;
 }
