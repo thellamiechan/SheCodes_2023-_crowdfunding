@@ -1,73 +1,75 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/use-auth.js';
+import useProject from '../../hooks/useProject.js';
 import putProject from '../../api/putProject.js';
+import './ChangeProject.css';
 
 function ChangeProject(props) {
-    const navigate = useNavigate();
-    const {auth, setAuth} = useAuth();
-    const [isLoading, setIsLoading] = useState(false);
-    const [projectData, setProjectData]= useState({
-        title: '',
-        synopsis: '',
-        goal: 0,
-        image: '',
-        is_open: false,
+  const navigate = useNavigate();
+  const { auth, setAuth } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+  const [projectData, setProjectData] = useState({
+    title: '',
+    synopsis: '',
+    goal: 0,
+    image: '',
+    is_open: false,
   })
-    const handleChange = (e) => {
-      setProjectData({
-        ...projectData, 
-        [e.target.id]: e.target.value
-    })
-  } 
-    
-    const handleChecked = (e) => {
-      setProjectData({
-        ...projectData,
-        [e.target.id]: e.target.checked
+  const handleChange = (e) => {
+    setProjectData({
+      ...projectData,
+      [e.target.id]: e.target.value
     })
   }
 
-    const handleSubmit = (e) => {
-      e.preventDefault()
-      setIsLoading(true)
-
-      putProject(projectData)
-        .then(() => {
-          navigate(0)
-        })
-        .catch (() => {
-          setIsLoading(false);
-        })
+  const handleChecked = (e) => {
+    setProjectData({
+      ...projectData,
+      [e.target.id]: e.target.checked
+    })
   }
-    if(isLoading) {
-      return <p>Loading...</p>
-    };
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setIsLoading(true)
+
+    putProject(projectData)
+      .then(() => {
+        navigate('/')
+      })
+      .catch(() => {
+        setIsLoading(false);
+      })
+  }
+  if (isLoading) {
+    return <p>Loading...</p>
+  };
 
 
-return (
-    <form onSubmit={handleSubmit}>
+  return (
+    <form className='changeform' onSubmit={handleSubmit}>
       <div>
         <label htmlFor="title">Title</label>
-        <input 
-          type="text" 
-          id="title" 
-          placeholder='Edit the title of your book' 
-          onChange={handleChange} 
+        <input
+          type="text"
+          id="title"
+          placeholder='Edit the title of your book'
+          onChange={handleChange}
         />
       </div>
       <div>
         <label htmlFor="synopsis">Synopsis</label>
-        <input 
-          type="text" 
-          id="synopsis" 
-          placeholder='Edit the synopsis of book' 
-          onChange={handleChange} 
+        <input
+          type="text"
+          id="synopsis"
+          placeholder='Edit the synopsis of book'
+          onChange={handleChange}
         />
       </div>
       <div>
         <label htmlFor="goal">Goal</label>
-        <input 
+        <input
           type="text"
           id="goal"
           placeholder='Crowdfunding Goal'
@@ -84,7 +86,7 @@ return (
       </div>
       <input type="submit" value="Submit your Changes" />
     </form>
-  )    
+  )
 }
 
 export default ChangeProject

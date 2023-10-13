@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import postLogin from "../../api/postLogin/";
 import { useAuth } from '../../hooks/use-auth.js';
+import './LoginForm.css';
 
 function LoginForm() {
     const navigate = useNavigate();
@@ -37,7 +38,7 @@ function LoginForm() {
 
 
     return (
-        <form>
+        <form className='loginform'>
             <div>
                 <label htmlFor="username">Username</label>
                 <input

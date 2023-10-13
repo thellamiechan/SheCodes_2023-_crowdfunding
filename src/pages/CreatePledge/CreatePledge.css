@@ -1,4 +1,4 @@
-.contact-content {
+.pledgeform {
     width: 500px;
     padding: 16px;
     margin-left: 480px;
@@ -9,12 +9,3 @@
     box-shadow: 0px 0px 5px #756658ff;
     background-color: #F7E9C8ff;
 }
-
-.contact-content h1{
-    font-size: 32px;
-}
-.contact-content p{
-line-height: 1.5;
-}
-
-

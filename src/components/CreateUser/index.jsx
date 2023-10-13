@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import postUser from '../../api/postUser';
+import './CreateUser.css';
 
 function CreateUser() {
     const navigate = useNavigate()
@@ -37,7 +38,7 @@ function CreateUser() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className='userform' onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="username">Username</label>
                 <input
