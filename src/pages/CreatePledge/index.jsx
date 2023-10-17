@@ -4,16 +4,16 @@ import { useAuth } from '../../hooks/use-auth.js';
 import postPledge from '../../api/postPledge';
 import './CreatePledge.css'
 
-function CreatePledgePage() {
+function CreatePledgePage(props) {
   const navigate = useNavigate()
   const { auth, setAuth } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [pledgeData, setPledgeData] = useState({
     amount: 0,
     comment: '',
-    project: `projects/:id`,
+    project: `projects/${id}`,
     anonymous: false,
-    supporter:'users/:id'
+    supporter: `users/${id}`
   })
   console.log(pledgeData)
   // console.log(useProject(projectId));
