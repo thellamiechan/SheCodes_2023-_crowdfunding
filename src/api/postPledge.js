@@ -11,7 +11,8 @@ async function postPledge(pledgeData) {
             "amount": pledgeData.amount,
             "project": pledgeData.projectId,
             "comment": pledgeData.comment,
-            "anonymous": pledgeData.anonymous
+            "anonymous": pledgeData.anonymous,
+            "supporter": pledgeData.userId
         }),
     });
 

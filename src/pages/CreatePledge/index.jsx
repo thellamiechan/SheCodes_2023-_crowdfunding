@@ -12,7 +12,8 @@ function CreatePledgePage() {
     amount: 0,
     comment: '',
     project: `projects/:id`,
-    anonymous: false
+    anonymous: false,
+    supporter:'users/:id'
   })
   console.log(pledgeData)
   // console.log(useProject(projectId));
