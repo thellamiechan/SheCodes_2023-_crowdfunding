@@ -8,14 +8,12 @@ async function postPledge(pledgeData) {
             "Authorization": `Token ${token}`
         },
         body: JSON.stringify({
-            "project": pledgeData.projectId,
             "amount": pledgeData.amount,
+            "project": pledgeData.projectId,
             "comment": pledgeData.comment,
-            "anonymous": pledgeData.anonymous,
-            "supporter": 2
+            "anonymous": pledgeData.anonymous
         }),
     });
-    console.log(pledgeData);
 
     if (!response.ok) {
         const fallbackError = "Error trying to load";
