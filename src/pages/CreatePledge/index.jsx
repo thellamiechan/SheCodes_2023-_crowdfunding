@@ -11,7 +11,7 @@ function CreatePledgePage(props) {
   const [pledgeData, setPledgeData] = useState({
     amount: 0,
     comment: '',
-    project: `projects/${id}`,
+    project: `projects/:id`,
     anonymous: false,
     supporter: `users/${id}`
   })

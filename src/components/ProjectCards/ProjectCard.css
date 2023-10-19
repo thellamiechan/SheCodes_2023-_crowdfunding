@@ -20,7 +20,6 @@
 
 .projectCard img {
     width: 100%;
-    margin-left: 2px;
     height: 300px;
     object-fit: cover;
     border: 1px solid;

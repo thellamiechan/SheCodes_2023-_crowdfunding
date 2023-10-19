@@ -1,3 +1,8 @@
+
+.hero {
+    max-height: 350px;
+
+}
 .about-content {
 width: 100%;
 text-align: center;
@@ -11,4 +16,5 @@ background-color: #F7E9C8ff;
 }
 .about-content p{
     line-height: 1.5;
+    white-space: pre-wrap;
 }
