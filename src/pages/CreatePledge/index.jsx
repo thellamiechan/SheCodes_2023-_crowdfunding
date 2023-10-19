@@ -9,11 +9,13 @@ function CreatePledgePage(props) {
   const { auth, setAuth } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [pledgeData, setPledgeData] = useState({
+    //todo - we need to get the actual project and supporter id - instead of the strings below - and send it in the request
+    //todo - this is where we are setting our default values that we send in the req
     amount: 0,
     comment: '',
-    project: `projects/:id`,
+    project: '/project/:id',
     anonymous: false,
-    supporter: `users/${id}`
+    supporter: '/user/:id'
   })
   console.log(pledgeData)
   // console.log(useProject(projectId));
@@ -21,7 +23,7 @@ function CreatePledgePage(props) {
   const handleChange = (e) => {
     setPledgeData({
       ...pledgeData,
-      [e.target.id]: e.target.value
+      [e.target.id]: e.target.value,
     })
   };
 

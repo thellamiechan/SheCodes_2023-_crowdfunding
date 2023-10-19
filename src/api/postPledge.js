@@ -1,4 +1,6 @@
 async function postPledge(pledgeData) {
+
+    console.log("hello this is the POST PLEDGE REQUEST-------")
     const url = `${import.meta.env.VITE_API_URL}/pledges/`;
     const token = window.localStorage.getItem("token");
     const response = await fetch(url, {
@@ -17,6 +19,8 @@ async function postPledge(pledgeData) {
     });
 
     if (!response.ok) {
+
+        console.log("this is the POST PLEDGE REQUEST- FAILING----")
         const fallbackError = "Error trying to load";
 
         const data = await response.json().catch(() => {
