@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/use-auth.js';
 import postPledge from '../../api/postPledge';
-import './CreatePledge.css'
+import './CreatePledge.css';
 
 function CreatePledgePage(props) {
   const navigate = useNavigate()

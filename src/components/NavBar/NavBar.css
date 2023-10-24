@@ -19,7 +19,7 @@
     justify-content: space-between;
     padding: 20px;
     color: #F7E9C8ff;
-    background-image: linear-gradient(to left,#9A6034ff, #602C10);
+    background:fixed #602C10;
   }
 
   .nav-links {
