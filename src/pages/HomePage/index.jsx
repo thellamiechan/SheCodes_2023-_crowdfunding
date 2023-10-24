@@ -1,5 +1,6 @@
 import useProjects from "../../hooks/useProjects";
 import ProjectCard from "../../components/ProjectCards";
+
 import "./HomePage.css";
 
 function HomePage() {
@@ -16,7 +17,7 @@ function HomePage() {
     return (
         <body>
         <div className='hero'>
-            <img src='images/reading_on_the_moon_300x300.png' alt='girl-reading-on-moon'/>
+            <img src='../../../images/reading_on_the_moon_300x300.png' alt='girl-reading-on-moon'/>
             <h1>A crowdfunding platform for self-publishing books</h1>
         <ol>
             <p>1. Post your book idea for others to see. </p>
