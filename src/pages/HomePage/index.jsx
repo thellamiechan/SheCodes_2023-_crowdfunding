@@ -16,7 +16,7 @@ function HomePage() {
     return (
         <body>
             <div className='hero'>
-                <img src='public/reading_on_the_moon.jpg' alt='girl-reading-on-moon' />
+                <img src='/reading_on_the_moon.jpg' alt='girl-reading-on-moon' />
                 <h1>A crowdfunding platform for self-publishing books</h1>
                 <ol>
                     <p>1. Post your book idea for others to see. </p>
