@@ -5,7 +5,7 @@ function AboutPage() {
   return (
     <div>
       <div className='hero'>
-        <img src='crowdfunding-frontend/public/reading_on_the_moon.jpg' alt='girl-reading-on-moon' />
+        <img src='/reading_on_the_moon.jpg' alt='girl-reading-on-moon' />
         <h1>A crowdfunding platform for self-publishing books</h1>
       </div>
       <div className="about-content">
