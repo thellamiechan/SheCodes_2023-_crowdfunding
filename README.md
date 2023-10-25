@@ -76,3 +76,4 @@ https://master--magical-nougat-3b05c8.netlify.app/
 Please take note of the last two images, the last is an image of a project card when no one is logged in, the last -1 is of a project card with a user logged in. The link to both post a pledge and to edit the project card are not even available to an unauthorized user.
 
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d8eeb9e6-09c2-459a-8223-afb3399004d1/deploy-status)](https://app.netlify.com/sites/magical-nougat-3b05c8/deploys)
