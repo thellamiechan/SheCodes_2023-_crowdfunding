@@ -6,13 +6,11 @@
   }
   
   a {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Noto Serif KR', serif;
     text-decoration: none;
   }
   #footer {
-
-
-     display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-around;
     color: #F7E9C8ff;
