@@ -3,28 +3,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  a {
+}
+
+a {
     font-family: 'Noto Serif KR', serif;
     text-decoration: none;
-  }
+}
+
 .hero {
     background-color: #F7E9C8ff;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    white-space: pre-wrap; 
+    white-space: pre-wrap;
 
 }
+
 .hero h1 {
     padding-top: 60px;
     padding-left: 16px;
 }
+
 .hero ol {
     padding-top: 60px;
     padding-left: 16px;
 }
+
 .hero img {
     border: 1px solid #1B171Eff;
     box-shadow: 0px 0px 5px #756658ff;
@@ -32,6 +36,7 @@
     margin: 16px;
 
 }
+
 .project-list {
     display: grid;
     padding-left: 32px;
