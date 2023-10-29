@@ -6,12 +6,12 @@
   }
   
   a {
+    font-family: 'Josefin Sans', sans-serif;
     text-decoration: none;
-    color: #F7E9C8ff;
   }
+  #footer {
 
 
-#footer {
      display: flex;
     align-items: center;
     justify-content: space-around;

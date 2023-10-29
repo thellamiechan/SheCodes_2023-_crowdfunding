@@ -1,4 +1,14 @@
-
+/* -----------------RESET BASICS--------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+  }
 .hero {
     background-color: #F7E9C8ff;
     display: flex;
