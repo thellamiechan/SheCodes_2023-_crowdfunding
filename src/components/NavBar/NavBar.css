@@ -1,39 +1,39 @@
 /* -----------------RESET BASICS--------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  a {
-    font-family: 'Noto Serif KR', serif;
-    text-decoration: none;
-  }
-  
-  li {
-    list-style: none;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-family: 'Noto Serif KR', serif;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    color: #F7E9C8ff;
-    background:fixed #602C10;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: 'Noto Serif KR', serif;
+  color: #F7E9C8ff;
+  background: fixed #602C10;
+}
 
-  .nav-links {
-    font-size: 32px;
-    
-  }
+.nav-links {
+  font-size: 32px;
 
-  .nav-links a {
-    color: #F7E9C8ff;
-  }
+}
 
-  /* LOGO */
+.nav-links a {
+  color: #F7E9C8ff;
+}
+
+/* LOGO */
 .logo {
-    font-size: 48px;
-  }
-
+  font-size: 48px;
+}

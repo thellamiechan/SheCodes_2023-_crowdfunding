@@ -11,6 +11,7 @@ a {
 }
 
 .hero {
+    font-family: 'Noto Serif KR', serif;
     background-color: #F7E9C8ff;
     display: flex;
     flex-direction: row;

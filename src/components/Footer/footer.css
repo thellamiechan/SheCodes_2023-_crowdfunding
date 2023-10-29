@@ -1,23 +1,23 @@
 /* -----------------RESET BASICS--------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  a {
-    font-family: 'Noto Serif KR', serif;
-    color: #F7E9C8ff;
-    text-decoration: none;
-  }
-  #footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    color: #F7E9C8ff;
-    background:fixed #602C10;
-    font-weight: 500;
-    font-size: 1em;
-    padding: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+a {
+  font-family: 'Noto Serif KR', serif;
+  color: #F7E9C8ff;
+  text-decoration: none;
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #F7E9C8ff;
+  background: fixed #602C10;
+  font-weight: 500;
+  font-size: 1em;
+  padding: 16px;
+}
