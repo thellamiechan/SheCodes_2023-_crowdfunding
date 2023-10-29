@@ -1,5 +1,6 @@
 import useProjects from "../../hooks/useProjects";
 import ProjectCard from "../../components/ProjectCards";
+import Footer from "../../components/Footer"
 import "./HomePage.css";
 
 function HomePage() {
@@ -29,6 +30,7 @@ function HomePage() {
                     return <ProjectCard key={key} projectData={projectData} />;
                 })}
             </div>
+            <Footer/>
         </body>
     );
 }

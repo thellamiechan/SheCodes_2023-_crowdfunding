@@ -1,0 +1,24 @@
+/* -----------------RESET BASICS--------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #F7E9C8ff;
+  }
+
+
+#footer {
+     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #F7E9C8ff;
+    background:fixed #602C10;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 16px;
+}
+
