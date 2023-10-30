@@ -18,29 +18,31 @@ function ProjectPage() {
   }
 
   return (
-    <div className='project-page'>
-      <img src={project.image_url} alt={project.title} />
-      <h2>{project.title}</h2>
-      <p>{project.synopsis}</p>
-      <h3>Created at: {project.date_created}</h3>
-      <h3>{`Project is open to pledges: ${project.is_open}`}</h3>
-      <h3>Pledges:</h3>
-      <ul>
-        {project.pledges.map((pledgeData, key) => {
-          return (
-            <li key={key}>
-              {pledgeData.amount} from {pledgeData.supporter}
-            </li>
-          );
-        })}
-      </ul>
-        {auth.token && (
-          <>
-            <Link to="/pledges/">Add a Pledge </Link>
-            <Link to="/projects/:id">Edit Project </Link>
-          </>
+    <body className='project-page'>
+      <div>
+        <img src={project.image_url} alt={project.title} />
+        <h2>{project.title}</h2>
+        <p>{project.synopsis}</p>
+        <h3>Created at: {project.date_created}</h3>
+        <h3>{`Project is open to pledges: ${project.is_open}`}</h3>
+        <h3>Pledges:</h3>
+        <ul>
+          {project.pledges.map((pledgeData, key) => {
+            return (
+              <li key={key}>
+                {pledgeData.amount} from {pledgeData.supporter}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      {auth.token && (
+        <>
+          <Link to="/pledges/">Add a Pledge </Link>
+          <Link to="/projects/:id">Edit Project </Link>
+        </>
       )}
-    </div>
+    </body>
   );
 }
 
